@@ -44,3 +44,19 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### steps:
+    # ... install modules before activating the license
+    - name: Install NPM modules
+      run: npm install
+
+    - name: Activate Kendo UI License
+      # Set working directory if the application is not in the repository root folder:
+      # working-directory: 'ClientApp'
+      run: npx kendo-ui-license activate
+      env:
+        KENDO_UI_LICENSE: ${{ secrets.KENDO_UI_LICENSE }}
+
+    # ... run application build after license activation
+    - name: Build Application
+      run: npm run build
