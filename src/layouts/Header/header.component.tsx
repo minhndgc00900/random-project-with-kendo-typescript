@@ -1,14 +1,35 @@
-import { ReactElement } from 'react';
+import { ReactElement, useContext } from 'react';
 import headerBg from '../../assets/header-bg.png';
+import { AppContext } from '../../contexts';
+import { Avatar } from '@progress/kendo-react-layout';
+import userAvatar from '../../assets/user-avatar.jpg';
 
-// interface Props {
+interface Props {
+    onHandleExpandMenu: any;
+}
 
-// }
+function Header(props: Props): ReactElement {
+    const { onHandleExpandMenu } = props;
 
-function Header(): ReactElement {
+    const { avatar } = useContext(AppContext);
+
+    const hasImage = avatar && avatar.length > 0;
+
     return (
         <header className="header" style={{ backgroundImage: `url(${headerBg})` }} >
-            <div/>
+            <div className="nav-container">
+                <div className="menu-button">
+                    <span className={'k-icon k-i-menu'} onClick={onHandleExpandMenu} />
+                </div>
+                <div className="title">
+                    <h1>
+                        Coffee Warehouse
+                    </h1>
+                </div>
+                <Avatar type={'image'} shape={'circle'}>
+                    {hasImage ? <img src={userAvatar} alt="user-avatar" /> : <img src={userAvatar} alt="user-avatar" />}
+                </Avatar>
+            </div>
         </header>
     );
 }
