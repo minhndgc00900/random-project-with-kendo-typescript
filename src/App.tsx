@@ -1,6 +1,6 @@
 import '@progress/kendo-theme-default/dist/all.css';
 import { lazy, Suspense, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import { countries } from './configs/countries';
 import { AppContext } from './contexts';
@@ -33,6 +33,9 @@ function App() {
           <Router>
             <DrawerRouter>
               <Switch>
+                <Route exact={true} path="/">
+                  <Redirect to="/dashboard" />
+                </Route>
                 <Route exact={true} path="/demo" component={DemoComponent} />
                 <Route exact={true} path="/dashboard" component={Dashboard} />
               </Switch>

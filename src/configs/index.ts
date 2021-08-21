@@ -15,3 +15,5 @@ export const initialProduct: Product = {
     inEdit: false,
     locked: false,
 };
+
+export const categories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];

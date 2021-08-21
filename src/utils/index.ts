@@ -5,3 +5,6 @@ export const dataStateConfig: State = {
     take: 10,
     skip: 0,
 };
+
+export const MONTH_FORMAT = 'MMMM yyyy';
+export const COMPACT_FORMAT = 'MM yyyy';
