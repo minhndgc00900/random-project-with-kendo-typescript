@@ -7,6 +7,7 @@
     "@progress/kendo-drawing": "^1.11.0",
     "@progress/kendo-licensing": "^1.2.0",
     "@progress/kendo-react-animation": "^4.8.0",
+    "@progress/kendo-react-charts": "^4.8.0",
     "@progress/kendo-react-data-tools": "^4.8.0",
     "@progress/kendo-react-dateinputs": "^4.8.0",
     "@progress/kendo-react-dialogs": "^4.8.0",

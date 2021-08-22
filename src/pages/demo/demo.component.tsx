@@ -11,14 +11,11 @@ import products from '../../data/products.json';
 import '@progress/kendo-theme-default/dist/all.css';
 import { DropDownList, DropDownListChangeEvent } from '@progress/kendo-react-dropdowns';
 import { Product } from '../../interfaces/interfaces';
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 import { dataStateConfig } from '../../utils/index';
 import { Window, WindowActionsEvent } from '@progress/kendo-react-dialogs';
 import { initialProduct } from '../../configs/index';
-
-// interface Props {
-//     test: 'test';
-// }
+import { ReactElement } from 'react';
 
 function Demo(): ReactElement {
     const availableProducts = products.slice();

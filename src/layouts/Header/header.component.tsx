@@ -23,7 +23,7 @@ function Header(props: Props): ReactElement {
                 </div>
                 <div className="title">
                     <h1>
-                        Coffee Warehouse
+                        Minh Nguyen
                     </h1>
                 </div>
                 <Avatar type={'image'} shape={'circle'}>
