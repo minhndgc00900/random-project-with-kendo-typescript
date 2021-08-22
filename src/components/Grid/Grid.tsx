@@ -51,7 +51,6 @@ function GridComponent(props: Props): ReactElement {
             // const last = lastSelectedIndexRef.current;
             const updatedData = data.map((item: any) => ({ ...item }));
             const current = data.findIndex((dataItem: any) => dataItem === event.dataItem);
-            console.log(222, current);
 
             // for (let i = Math.min(last, current); i <= Math.max(last, current); i++) {
             //     updatedData[i].selected = select;
@@ -65,6 +64,7 @@ function GridComponent(props: Props): ReactElement {
 
     const onHeaderSelectionChange = useCallback(
         (event: any) => {
+            console.log(333);
             const checked = event.syntheticEvent.target.checked;
             const updateData = data.map((it: any) => ({
                 ...it,

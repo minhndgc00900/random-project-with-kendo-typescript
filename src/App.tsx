@@ -24,6 +24,7 @@ function App() {
 
   const DemoComponent = lazy(() => import('./pages/demo/demo.component'));
   const Dashboard = lazy(() => import('./pages/dashboard/dashboard.component'));
+  const CloneComponent = lazy(() => import('./pages/clone/clone.component'));
 
   return (
 
@@ -38,6 +39,7 @@ function App() {
                 </Route>
                 <Route exact={true} path="/demo" component={DemoComponent} />
                 <Route exact={true} path="/dashboard" component={Dashboard} />
+                <Route exact={true} path="/clone" component={CloneComponent} />
               </Switch>
             </DrawerRouter>
           </Router>

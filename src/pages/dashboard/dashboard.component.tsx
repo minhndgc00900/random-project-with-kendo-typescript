@@ -2,6 +2,7 @@ import { filterBy } from '@progress/kendo-data-query';
 import { GridColumn as Column } from '@progress/kendo-react-grid';
 import { ReactElement, useContext, useState } from 'react';
 import GridComponent from '../../components/Grid/Grid';
+import { FlagCells } from '../../components/GridCells/GridCells';
 import { AppContext } from '../../contexts';
 import { employees } from '../../data/employees';
 import { orders } from '../../data/orders';
@@ -56,19 +57,19 @@ function Dashboard(): ReactElement {
                             onDataChange={(data: any) => setEmployeeData(data)}
                         >
                             <Column title="Employee" groupable={false}>
-                                <Column title="Contact Name" field="fullName" />
-                                <Column title="Job Title" field="jobTitle" />
-                                <Column title="Country" field="country" />
-                                <Column title="Status" field="isOnline" />
+                                <Column title="Contact Name" field="fullName" width={230} />
+                                <Column title="Job Title" field="jobTitle" width={230} />
+                                <Column title="Country" field="country" width={100} cell={FlagCells} />
+                                <Column title="Status" field="isOnline" width={100} />
                             </Column>
                             <Column title="Performance" groupable={false}>
-                                <Column title="Rating" field="rating" />
-                                <Column title="Engagement" field="target" />
-                                <Column title="Budget" field="budget" />
+                                <Column title="Rating" width={110} field="rating" />
+                                <Column title="Engagement" width={200} field="target" />
+                                <Column title="Budget" width={100} field="budget" />
                             </Column>
                             <Column title="Contacts" groupable={false}>
-                                <Column title="Phone" field="phone" />
-                                <Column title="Address" field="rating" />
+                                <Column title="Phone" field="phone" width={130} />
+                                <Column title="Address" field="rating" width={200} />
                             </Column>
                         </GridComponent>
                     </div>
