@@ -1,0 +1,47 @@
+%common-panel {
+    padding: 15px;
+    border-radius: 3px;
+    margin: 25px;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+}
+
+@mixin smallerScreen {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+.milestone-form-panel {
+    @extend %common-panel;
+    box-shadow: 2px 1px 6px 2px rgba(147, 147, 147, 0.75);
+    -webkit-box-shadow: 2px 1px 6px 2px rgba(147, 147, 147, 0.75);
+    -moz-box-shadow: 2px 1px 6px 2px rgba(147, 147, 147, 0.75);
+}
+
+.milestone-form-panel-child {
+    @extend %common-panel;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+}
+
+.milestone-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.milestone-content-col {
+    margin-right: 30px;
+    // &__input-form {
+    //     display: flex;
+    //     justify-content: column;
+    // }
+}
+
+.input-description {
+    & > .k-textbox {
+        width: 23.4em !important;
+    }
+}

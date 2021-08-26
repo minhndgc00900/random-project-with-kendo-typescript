@@ -11,7 +11,7 @@ interface Props {
 function DrawerRouter(props: RouteComponentProps & Props): ReactElement {
     const { children, location, history } = props;
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
-    const [isScreenSmall] = useState<boolean>(window.innerWidth > 768);
+    // const [isScreenSmall] = useState<boolean>(window.innerWidth > 768);
 
     const onHandleExpandMenu = () => {
         setIsExpanded((prev: boolean) => !prev);
@@ -32,16 +32,14 @@ function DrawerRouter(props: RouteComponentProps & Props): ReactElement {
 
     const nameSelected = getSelectedMenu(location.pathname);
 
-    console.log(123, props);
-
     return (
         <>
             <Header onHandleExpandMenu={onHandleExpandMenu} />
             <Drawer
                 expanded={isExpanded}
                 position="start"
-                mode={isScreenSmall ? 'push' : 'overlay'}
-                mini={isScreenSmall ? true : false}
+                mode={'overlay'}
+                // mini={isScreenSmall ? true : false}
                 onOverlayClick={onHandleExpandMenu}
                 onSelect={onHandleSelect}
                 items={items.map((it: any) => ({

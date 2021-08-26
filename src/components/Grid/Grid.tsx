@@ -84,6 +84,7 @@ function GridComponent(props: Props): ReactElement {
             data={dataProcess}
             pageable={true}
             sortable={true}
+            scrollable={'scrollable'}
             rowHeight={40}
             // groupable={true}
             selectedField={'selected'}
